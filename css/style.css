@@ -207,11 +207,13 @@ figure.Фролова_РИСОЦС-625_Рисунок {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  align-items: start;
+  align-items: stretch;
   margin: 8px 0 28px;
 }
 
 .Фролова_РИСОЦС-625_Карточка {
+  display: flex;                         /* карточки одной высоты */
+  flex-direction: column;
   background: #ffffff;
   border: 1px solid #c9d3d6;
   padding: 16px;
@@ -362,3 +364,10 @@ figure.Фролова_РИСОЦС-625_Рисунок {
 @media print {
   .Фролова_РИСОЦС-625_Шапка, .Фролова_РИСОЦС-625_Подвал { display: none; }
 }
+
+/* Ссылка «Подробнее» / «Официальный сайт» прижата к низу карточки */
+.Фролова_РИСОЦС-625_Карточка p:last-child { margin-top: auto; padding-top: 6px; }
+
+/* Легенда карты: две колонки на широком экране */
+.Фролова_РИСОЦС-625_Легенда { columns: 2; column-gap: 32px; font-size: 13pt; }
+@media (max-width: 720px) { .Фролова_РИСОЦС-625_Легенда { columns: 1; } }

@@ -1,0 +1,364 @@
+/* ==========================================================
+   Сайт «Достопримечательности Красноярска»
+   Автор: Фролова Д. А., РИСО ЦС, группа 625, вариант 3
+   ========================================================== */
+
+/* ---------- Стили варианта 3 (обязательные) ---------- */
+
+/* Стиль для заголовка: Courier New 18, Ж, с тенью, уплотнённый на 1 пт,
+   1 уровень, без переносов, всегда с новой страницы,
+   выравнивание по центру, интервал после 18 пт */
+h1.Фролова_РИСОЦС-625_Гл {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 18pt;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px rgba(15, 58, 82, 0.35);  /* с тенью */
+  letter-spacing: -1pt;                  /* уплотнённый на 1 пт */
+  hyphens: none;                         /* без переносов */
+  -webkit-hyphens: none;
+  page-break-before: always;             /* всегда с новой страницы */
+  break-before: page;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 18pt;                   /* интервал после 18 пт */
+  color: #0f3a52;
+}
+
+/* Стиль для подзаголовка: Courier New 16, К, 2 уровень,
+   выравнивание по центру, интервал после 12 пт,
+   межстрочный интервал 20 пт точно */
+h2.Фролова_РИСОЦС-625_Подзаг {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16pt;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 22pt;
+  margin-bottom: 12pt;                   /* интервал после 12 пт */
+  line-height: 20pt;                     /* межстрочный 20 пт точно */
+  color: #a8471f;
+}
+
+/* Стиль основного текста: Courier New 14, выравнивание по ширине,
+   красная строка 1,5 см, межстрочный интервал 1,5 */
+p.Фролова_РИСОЦС-625_Оснтек {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14pt;
+  text-align: justify;
+  text-indent: 1.5cm;                    /* красная строка 1,5 см */
+  line-height: 1.5;                      /* полуторный интервал */
+  margin: 0 0 8pt 0;
+  color: #14232b;
+}
+
+/* ---------- Общее оформление страниц ---------- */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f2f4f2;
+  color: #14232b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14pt;
+}
+
+a { color: #a8471f; }
+a:hover { color: #0f3a52; }
+
+.Фролова_РИСОЦС-625_Шапка {
+  background: #0f3a52;
+  color: #f2f4f2;
+  padding: 18px 24px 0;
+}
+
+.Фролова_РИСОЦС-625_Логотип {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+}
+
+.Фролова_РИСОЦС-625_Логотип a { color: #f2f4f2; text-decoration: none; }
+
+.Фролова_РИСОЦС-625_Девиз {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #bcd3dd;
+  margin: 0 0 14px;
+}
+
+.Фролова_РИСОЦС-625_Меню {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Фролова_РИСОЦС-625_Меню a {
+  display: block;
+  padding: 12px 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  color: #f2f4f2;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.Фролова_РИСОЦС-625_Меню a:hover,
+.Фролова_РИСОЦС-625_Меню a.active { border-bottom-color: #e3a14a; }
+
+.Фролова_РИСОЦС-625_Содержимое {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 36px 24px 48px;
+}
+
+/* Внутренняя навигация по якорям */
+.Фролова_РИСОЦС-625_Якоря {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #ffffff;
+  border: 1px solid #c9d3d6;
+  padding: 12px 16px;
+  margin: 0 0 24px;
+}
+
+.Фролова_РИСОЦС-625_Якоря a { margin-right: 6px; }
+
+.Фролова_РИСОЦС-625_Наверх {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  text-align: right;
+  margin: 6px 0 18px;
+}
+
+/* Таблицы */
+table.Фролова_РИСОЦС-625_Таблица {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 12px 0 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.Фролова_РИСОЦС-625_Таблица caption {
+  font-style: italic;
+  text-align: left;
+  padding-bottom: 8px;
+  color: #4b5f69;
+}
+
+.Фролова_РИСОЦС-625_Таблица th {
+  background: #0f3a52;
+  color: #f2f4f2;
+  text-align: left;
+  padding: 10px 12px;
+}
+
+.Фролова_РИСОЦС-625_Таблица td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #c9d3d6;
+  vertical-align: top;
+}
+
+.Фролова_РИСОЦС-625_Таблица tr:nth-child(even) td { background: #eef3f4; }
+
+.Фролова_РИСОЦС-625_Прокрутка { overflow-x: auto; }
+
+/* Списки */
+.Фролова_РИСОЦС-625_Список {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14pt;
+  line-height: 1.6;
+  margin: 0 0 16px;
+  padding-left: 2.2em;
+}
+
+/* Иллюстрации */
+figure.Фролова_РИСОЦС-625_Рисунок {
+  margin: 12px 0 24px;
+  text-align: center;
+}
+
+.Фролова_РИСОЦС-625_Рисунок img {
+  max-width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  border: 1px solid #c9d3d6;
+  background: #ffffff;
+}
+
+.Фролова_РИСОЦС-625_Рисунок figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #4b5f69;
+  margin-top: 6px;
+}
+
+/* Карточки (балерины, театры) */
+.Фролова_РИСОЦС-625_Карточки {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: start;
+  margin: 8px 0 28px;
+}
+
+.Фролова_РИСОЦС-625_Карточка {
+  background: #ffffff;
+  border: 1px solid #c9d3d6;
+  padding: 16px;
+}
+
+.Фролова_РИСОЦС-625_Карточка img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Фролова_РИСОЦС-625_Карточка h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  margin: 0 0 4px;
+  color: #0f3a52;
+}
+
+.Фролова_РИСОЦС-625_Карточка p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.Фролова_РИСОЦС-625_Даты {
+  color: #4b5f69;
+  font-style: italic;
+}
+
+/* Фотографии в карточках: одинаковые пропорции */
+.Фролова_РИСОЦС-625_Карточка img.Фролова_РИСОЦС-625_Фото-портрет {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  object-position: top;
+}
+
+.Фролова_РИСОЦС-625_Карточка img.Фролова_РИСОЦС-625_Фото-здание {
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+}
+
+/* Главный баннер */
+.Фролова_РИСОЦС-625_Баннер {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 28px;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.Фролова_РИСОЦС-625_Баннер img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Фролова_РИСОЦС-625_Кнопка {
+  display: inline-block;
+  min-height: 44px;
+  padding: 12px 22px;
+  background: #a8471f;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.Фролова_РИСОЦС-625_Кнопка:hover { background: #0f3a52; color: #ffffff; }
+
+/* Подвал */
+.Фролова_РИСОЦС-625_Подвал {
+  background: #14232b;
+  color: #d9e2e6;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 24px;
+  line-height: 1.6;
+}
+
+.Фролова_РИСОЦС-625_Подвал a { color: #e3a14a; }
+
+.Фролова_РИСОЦС-625_Подвал-внутри {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Карта (image map) */
+.Фролова_РИСОЦС-625_Карта {
+  overflow-x: auto;
+  text-align: center;
+  margin: 12px 0 8px;
+}
+
+.Фролова_РИСОЦС-625_Карта img {
+  border: 1px solid #c9d3d6;
+  max-width: 100%;      /* карта сжимается на телефоне, области пересчитывает karta.js */
+  height: auto;
+}
+
+/* Галерея */
+.Фролова_РИСОЦС-625_Галерея {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+.Фролова_РИСОЦС-625_Галерея figure { margin: 0; }
+
+.Фролова_РИСОЦС-625_Галерея img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background: #14232b;
+  border: 1px solid #c9d3d6;
+  display: block;
+}
+
+.Фролова_РИСОЦС-625_Галерея figcaption {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding-top: 8px;
+}
+
+/* Подсказка под картой */
+.Фролова_РИСОЦС-625_Подсказка {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  font-style: italic;
+  color: #4b5f69;
+  text-align: center;
+  margin: 0 0 18px;
+}
+
+/* Телефон */
+@media (max-width: 720px) {
+  .Фролова_РИСОЦС-625_Баннер { grid-template-columns: 1fr; }
+  .Фролова_РИСОЦС-625_Содержимое { padding: 24px 16px 40px; }
+  p.Фролова_РИСОЦС-625_Оснтек { font-size: 13pt; }
+}
+
+/* Печать: заголовок 1 уровня всегда с новой страницы */
+@media print {
+  .Фролова_РИСОЦС-625_Шапка, .Фролова_РИСОЦС-625_Подвал { display: none; }
+}

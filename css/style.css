@@ -12,7 +12,7 @@ h1.Фролова_РИСОЦС-625_Гл {
   font-family: "Courier New", Courier, monospace;
   font-size: 18pt;
   font-weight: bold;
-  text-shadow: 2px 2px 3px rgba(15, 58, 82, 0.35);  /* с тенью */
+  text-shadow: 3px 3px 2px rgba(168, 71, 31, 0.55);  /* с тенью (хорошо заметной) */
   letter-spacing: -1pt;                  /* уплотнённый на 1 пт */
   hyphens: none;                         /* без переносов */
   -webkit-hyphens: none;
